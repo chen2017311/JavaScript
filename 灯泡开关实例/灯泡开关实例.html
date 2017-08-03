@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<img id="light" src="img/light-off.png" />
+		<input id="button" type="image" src="img/close.png" />
+		
+		
+		<script>
+			window.onload=function(){
+				//获取元素
+				var light=document.getElementById("light");
+				var button=document.getElementById("button");
+				
+				//增加一个全局变量，用来保存开关状态。默认状态与HTML初始图片保持一致，即默认为关闭状态。
+				var open=false;
+				button.onclick=function(){
+					if(open){
+						this.src="img/close.png";
+						light.src="img/light-off.png";
+						open=false;
+					}else{
+						this.src="img/open.png";
+						light.src="img/light-on.png";
+						open=true;
+					}
+				}
+				
+				
+			}
+			
+		</script>
+	</body>
+</html>
