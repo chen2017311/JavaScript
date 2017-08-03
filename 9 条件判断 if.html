@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+
+            /*if 如果     如果怎么样就怎么样
+            * if(条件){就怎么样}
+             */
+
+            if( 3 < 4){ //true false
+                alert("正确");
+            };
+
+//            if(判断条件){
+//                如果条件成立，执行
+//                如果不成立，跳过{}
+//            }
+            var a = "";
+            if(-12){ //只有真和假  true/非0   false /0
+                alert("睡觉");
+            };
+
+            var b = 10;
+            if(0) b = 20; b = 30;  //if后面不加{}，if能控制的范围，第一个；
+            alert(b);
+
+
+            /* if(判断条件){代码}
+            * if(判断条件){条件成立执行的代码块}else{条件不成立执行的代码}
+            * if(判断条件){条件成立执行的代码块}else if(判断条件){条件成立执行的代码块}else{条件不成立执行的代码}
+            * */
+
+
+            //60分以上及格  60分以下不及格
+            var s = 40;
+            if( s >= 60){
+                alert("及格");
+            }else {
+                alert("不及格");
+            }
+
+            //60-80  及格   80-90 良好 90往上 优秀 60往下不及格
+            //else 跟前面最近的if匹配
+            if( s > 90){
+                alert("优秀");
+            }else if(s > 80){
+                alert("良好");
+            }else if(s >= 60){
+                alert("及格");
+            }else {
+                alert("不及格");
+            }
+
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

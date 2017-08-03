@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="text" id="inp"><button id="but">切换</button><br>
+<p id="p1">当前显示的是img/1.jpg<span></span></p>
+<img src="img/1.jpg" alt="" id="img">
+
+
+
+<script>
+
+    var imgs  = document.getElementById("img");
+    var buts  = document.getElementById("but");
+    var inp = document.getElementById("inp");
+    var oP = document.getElementById("p1");
+
+    buts.onclick = function () {
+        imgs.src = "img/"+inp.value + ".jpg";
+
+        //innerHTML 元素的内容
+        alert(oP.innerHTML);  //元素的内容
+
+        //input  input.value
+        //p op.innerHTML
+
+
+        //input input.value = "name"
+        //p op.innerHTML = "age";
+
+        oP.innerHTML = "当前显示的是img/" + inp.value + ".jpg";
+
+
+    }
+</script>
+</body>
+</html>
+

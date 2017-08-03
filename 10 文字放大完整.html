@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+
+            var but1 = document.getElementById("but1");
+            var but2 = document.getElementById("but2");
+            var text = document.getElementById("text");
+            text.style.fontSize = "14px";
+            var size = 14;
+            but1.onclick = function () {
+                //36
+                if( size < 36){size = size + 2; }
+                console.log(size);
+                //js不能出现-,使用驼峰标识
+                text.style.fontSize = size + "px";
+            };
+
+            but2.onclick = function () {
+                size = size - 2;
+                if(size < 12){size = 12;}
+                console.log(size);
+                text.style.fontSize = size + "px";
+            };
+
+
+            /*
+             * 问题，文字放大缩小
+             * 1.文字的初始化大小 14px
+             * 2.每一次放大多少 +2
+             * 3.最大到36 最小到12
+             * */
+
+        }
+    </script>
+</head>
+<body>
+文字放大缩小 <button id="but1">+</button> <button id="but2">-</button>
+<p id="text">　优就业是中公教育IT培训品牌，致力于培养面向互联网领域的高端人才，以学员就业为目的，优质就业为宗旨，是一家集互联网营销师、UI交互设计师、Web前端工程师、Java工程师、PHP工程师、SEO优化师、SEM竞价师、社会化媒体运营师、电商运营师、互联网产品经理、Android工程师、iOS工程师、C/C++工程师、软件测试工程师、Linux云计算工程师、Python工程师，大数据工程师等课程为一体的IT培训机构。
+    　　优就业为学员量身打造的个性化、差异化就业流程，力保每一位学员不仅能就业，更能优就业。优就业会根据学员意愿建档统计就职意向,通过理论+实战+实训的学习，通过毕业考核后，将会接受专业的一对一就业服务指导。优就业了解合作企业的岗位需求，可针对各岗位进行差异化培训，打造符合岗位规范的应聘者。同时，会定期举办企业上门招聘双选会，学员可以与心仪的企业面对面沟通，并得到优就业的大力推荐。做到真正的对学员负责，对合作企业负责，达到人岗匹配的优化及双方利益的扩大化。
+</p>
+</body>
+</html>

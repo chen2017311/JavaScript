@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{width: 200px;height: 200px;border: 1px solid red;}
+        .active{width: 250px;height: 250px;background: pink;}
+    </style>
+    <script>
+        window.onload = function () {
+
+            var oDiv = document.getElementById("box");
+            //加事件
+            //给当前元素加class，之前元素清除
+            oDiv.onmouseover = function () {
+                oDiv.className = "active";
+            };
+            oDiv.onmouseout = function () {
+               oDiv.className = "";
+            }
+
+            //什么时候需要修改类 1.样式随事件动， 2.同时修改多个样式
+
+        }
+    </script>
+</head>
+<body>
+    <div id="box" class=""></div>
+    <div id="box1" ></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+
+</body>
+</html>
